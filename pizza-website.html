@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Pizza Order</title>
+
+<style>
+    body {
+        background: #f8f1e7;
+        font-family: Arial;
+    }
+
+    .card {
+        width: 420px;
+        background: white;
+        margin: 60px auto;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        text-align: center;
+    }
+
+    h2 {
+        color: #c0392b;
+    }
+
+    .pizza-img {
+        width: 100%;
+        border-radius: 12px;
+        margin-bottom: 15px;
+    }
+
+    .options {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+
+    .options img {
+        width: 50%;
+        border-radius: 10px;
+    }
+
+    select, button {
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        font-size: 16px;
+    }
+
+    button {
+        background: #e74c3c;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background: #c0392b;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+    <!-- صورة رئيسية -->
+    <img src="cheese.png" class="pizza-img">
+
+    <h2>Order Your Pizza</h2>
+
+    <!-- صور الأنواع -->
+    <div class="options">
+        <img src="chickens.jpg" alt="chickens Pizza">
+        <img src="meet.png" alt="Meat Pizza">
+        
+
+    </div>
+
+    <form action="pizza.cgi" method="get">
+        <select name="type">
+            <option value="">Choose Type</option>
+          <option value="chickens">cheese</option>
+            <option value="meat">Meat</option>
+            
+        </select>
+
+        <select name="size">
+            <option value="">Choose Size</option>
+            <option value="m">Medium</option>
+            <option value="l">Large</option>
+        </select>
+
+        <button type="submit">Order Now 🍕</button>
+    </form>
+</div>
+
+</body>
+</html>
